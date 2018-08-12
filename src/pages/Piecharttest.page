@@ -1,0 +1,808 @@
+<!-- Page: -->
+<apex:page controller="Piecharttestcontroller" id="thePage">
+<style>
+table{
+border-collapse:collapse;
+}
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #F0F0F0}
+</style>
+<apex:pageBlock title="Trailympics 2018">
+    
+        <apex:tabPanel switchType="server" selectedTab="name1" id="theTabPanel">
+        
+    <apex:tab label="Leaderboard" name="name1" id="tabOne">
+<div class="row"><div class="col-md-12"><div class="panel panel-success"><div class="panel-heading "><h3 class="panel-title"></h3></div>
+<table border="1" align="center" class="table table-striped table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Sr. No.</th>
+<th title="Field #2">Employee Name</th>
+<th title="Field #3">Current Points</th>
+<th title="Field #4">Badges</th>
+</tr></thead>
+<tbody><tr><td align="right">1</td>
+<td>Tej Pal Kumawat</td>
+<td>234180</td>
+<td>348</td>
+</tr>
+<tr><td align="right">2</td>
+<td>Dhwanil Shah</td>
+<td>114300</td>
+<td>156</td>
+</tr>
+<tr><td align="right">3</td>
+<td>Chintal Patel</td>
+<td>95050</td>
+<td>140</td>
+</tr>
+<tr><td align="right">4</td>
+<td>Bhargav Modi</td>
+<td>86225</td>
+<td>151</td>
+</tr>
+<tr><td align="right">5</td>
+<td>Mujahid Khan</td>
+<td>84877</td>
+<td>135</td>
+</tr>
+<tr><td align="right">6</td>
+<td>Mitul Kantliwala</td>
+<td>60300</td>
+<td>53</td>
+</tr>
+<tr><td align="right">7</td>
+<td>Amrita Pandey</td>
+<td>56475</td>
+<td>65</td>
+</tr>
+<tr><td align="right">8</td>
+<td>Pradeep Kumar</td>
+<td>48725</td>
+<td>61</td>
+</tr>
+<tr><td align="right">9</td>
+<td>Saumil N Sheth</td>
+<td>45580</td>
+<td>48</td>
+</tr>
+<tr><td align="right">10</td>
+<td>Nikunj Bhagatwala</td>
+<td>43800</td>
+<td>55</td>
+</tr>
+<tr><td align="right">11</td>
+<td>Hitesh Patel</td>
+<td>41650</td>
+<td>51</td>
+</tr>
+<tr><td align="right">12</td>
+<td>Ashish Kumar</td>
+<td>37450</td>
+<td>39</td>
+</tr>
+<tr><td align="right">13</td>
+<td>Darshan Chauhan</td>
+<td>37250</td>
+<td>35</td>
+</tr>
+<tr><td align="right">14</td>
+<td>Nikhil More</td>
+<td>34650</td>
+<td>50</td>
+</tr>
+<tr><td align="right">15</td>
+<td>Srishti Goyal</td>
+<td>28425</td>
+<td>38</td>
+</tr>
+<tr><td align="right">16</td>
+<td>Jigisha Mangroliya</td>
+<td>28275</td>
+<td>28</td>
+</tr>
+<tr><td align="right">17</td>
+<td>Jonica Khurana</td>
+<td>28130</td>
+<td>25</td>
+</tr>
+<tr><td align="right">18</td>
+<td>Jigar Trivedi</td>
+<td>21925</td>
+<td>24</td>
+</tr>
+<tr><td align="right">19</td>
+<td>Vandita Desai</td>
+<td>18845</td>
+<td>34</td>
+</tr>
+<tr><td align="right">20</td>
+<td>Divyansh Verma</td>
+<td>18400</td>
+<td>11</td>
+</tr>
+<tr><td align="right">21</td>
+<td>Abhishek Setia</td>
+<td>18300</td>
+<td>12</td>
+</tr>
+<tr><td align="right">22</td>
+<td>Neha Tailor</td>
+<td>12825</td>
+<td>21</td>
+</tr>
+<tr><td align="right">23</td>
+<td>Gayatri Patel</td>
+<td>12550</td>
+<td>11</td>
+</tr>
+<tr><td align="right">24</td>
+<td>Pallapotula Reddy</td>
+<td>10700</td>
+<td>10</td>
+</tr>
+<tr><td align="right">25</td>
+<td>Vishwas Gupta</td>
+<td>10375</td>
+<td>11</td>
+</tr>
+<tr><td align="right">26</td>
+<td>Tejas Patel</td>
+<td>8362</td>
+<td>13</td>
+</tr>
+<tr><td align="right">27</td>
+<td>Vaibhav Gosain</td>
+<td>8125</td>
+<td>13</td>
+</tr>
+<tr><td align="right">28</td>
+<td>Nitin Goel</td>
+<td>6725</td>
+<td>6</td>
+</tr>
+<tr><td align="right">29</td>
+<td>Gaurav Wason</td>
+<td>6150</td>
+<td>5</td>
+</tr>
+<tr><td align="right">30</td>
+<td>Nilesh Patil</td>
+<td>5150</td>
+<td>7</td>
+</tr>
+<tr><td align="right">31</td>
+<td>Dipak Kanani</td>
+<td>5000</td>
+<td>12</td>
+</tr>
+<tr><td align="right">32</td>
+<td>Hardik Mehta</td>
+<td>3800</td>
+<td>4</td>
+</tr>
+<tr><td align="right">33</td>
+<td>Niraj Prajapati</td>
+<td>3100</td>
+<td>1</td>
+</tr>
+<tr><td align="right">34</td>
+<td>Aakash Kumar</td>
+<td>1150</td>
+<td>2</td>
+</tr>
+<tr><td align="right">35</td>
+<td>Gopal Zala</td>
+<td>950</td>
+<td>2</td>
+</tr>
+<tr><td align="right">36</td>
+<td>Sangeeta Sahni</td>
+<td>875</td>
+<td>3</td>
+</tr>
+<tr><td align="right">37</td>
+<td>Jyotirmayee Kumar </td>
+<td>325</td>
+<td>1</td>
+</tr>
+<tr><td align="right">38</td>
+<td>Rebecca Scholl</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr><td align="right">39</td>
+<td>Amar Kak</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr><td align="right">40</td>
+<td>Shital Rathod</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr><td align="right">41</td>
+<td>Atul Hinge</td>
+<td>hidden</td>
+<td>hidden</td>
+</tr>
+</tbody></table>
+</div></div></div>    </apex:tab>
+<apex:tab label="FAQs" name="name4" id="tabFour">
+        <div id="FAQs" class="tab-pane fade in active">
+     <p><Strong>Q1. How do I register for the competition?</Strong> <br/>
+A.  Share your trailhead Profile link after making it public and start earning badges and points<br/><br/>
+
+<Strong>Q2. I am new to salesforce. How do I make a public trailhead profile?</Strong><br/>
+A.  Please refer to the Trailympics 2018 launch mailer and find the SOP attached for detailed information about making a trailhead profile.<br/><br/>
+
+<Strong>Q3. Is it mandatory to make a trailhead profile from my official genpact email?</Strong><br/>
+A.  No. You may use your personal email as well.<br/><br/>
+
+<Strong>Q4. Should I make a new trailhead account or use an existing trailhead account of mine to participate in this competition?</Strong><br/>
+A.  You should use your existing trailhead account to have benefit of points already earned in this account.<br/><br/>
+
+<Strong>Q5. I want to host a workshop on a focused Salesforce topic. How do I enroll for same?</Strong><br/>
+A.  Contact Pradeep Kumar: pradeep.kumar@genpact.digital or Ashish Kumar: Ashish.Kumar1e693d@genpact.digital for content review, booking and logistics.<br/><br/>
+
+<Strong>Q6. I want to attend a workshop. Where do I find the MR/timings and zoom link?</Strong><br/>
+A.  Watch out for mailers from Learning and Development team for further details regarding Trailympics 2018 workshops.<br/><br/>
+
+<Strong>Q7. What are the focused modules for the Salesforce workshops?</Strong><br/>
+A.  Below are the focused modules:<br/>
+a.  Development through Salesforce DX <br/>
+b.  REST Based Integration<br/>
+c.  Lightning Development Basics<br/>
+d.  Lightning Component Development<br/>
+e.  Lightning App Development<br/><br/>
+
+<Strong>Q8. I want to post an article on a Salesforce topic. Whom do I contact for getting it published?</Strong><br/>
+A.  Post the knowledge article as a blog on Gsocial and share the link with Amrita Pandey: Amrita.Pandey@genpact.digital, Gaurav Wason: gaurav.wason@genpact.digital or Vaibhav Gosain: vaibhav.gosain@genpact.digital<br/><br/>
+
+<Strong>Q9. What are the ways by which I can score in this competition?</Strong><br/>
+A.  Ways to score high in competition are:<br/>
+a.  Earn badges and points in trailhead, with extra weightage to focused modules<br/>
+b.  Conduct workshops<br/>
+c.  Attend workshops<br/>
+d.  Post knowledge sharing articles on Salesforce topics<br/><br/>
+</p>
+
+    </div>
+
+        </apex:tab>
+    <apex:tab label="Focused Modules" name="name2" id="tabTwo">
+    <apex:pageBlockSection >  
+           <apex:pageBlockSectionItem >
+     <apex:chart animate="true"  data="{!pieData}" height="300px" width="300px" background="#F5F5F5">    
+    <apex:legend position="right"/>
+    <apex:pieSeries highlight="true" labelField="name" dataField="data" donut="50">
+        <apex:chartLabel display="middle" orientation="horizontal" 
+            font="bold 0px Helvetica"/>
+    </apex:pieSeries>
+    </apex:chart>
+    
+</apex:pageBlockSectionItem>
+ <apex:pageBlockSectionItem >  
+    <div class="row"><div class="col-md-12"><div class="panel panel-success"><div class="panel-heading "><h3 class="panel-title"></h3></div>
+
+<table border="1" align="center" class="table table-striped table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Sr. No.</th>
+<th title="Field #2">Module Name</th>
+<th title="Field #3">Category</th>
+<th title="Field #4">Skill</th>
+<th title="Field #5">Group</th>
+</tr></thead>
+<tbody><tr><td align="right">1</td>
+<td>Analytics Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Analytics</td>
+</tr>
+<tr><td align="right">2</td>
+<td>Analytics Data Integration Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Analytics</td>
+</tr>
+<tr><td align="right">3</td>
+<td>Analytics Dashboard Building Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Analytics</td>
+</tr>
+<tr><td align="right">4</td>
+<td>Analytics Administration Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Analytics</td>
+</tr>
+<tr><td align="right">5</td>
+<td>Analytics Dashboard Navigation</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Analytics</td>
+</tr>
+<tr><td align="right">6</td>
+<td>Desktop Analytics Exploration</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Analytics</td>
+</tr>
+<tr><td align="right">7</td>
+<td>Einstein Discovery Story Insights</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">8</td>
+<td>Artificial Intelligence Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">9</td>
+<td>Live Agent Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">10</td>
+<td>Salesforce Einstein Features</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">11</td>
+<td>Einstein Discovery Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">12</td>
+<td>Einstein Discovery Data Integration</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">13</td>
+<td>Sales Cloud Einstein</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">14</td>
+<td>Einstein Intent API Basics</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">15</td>
+<td>Einstein Discovery Stories</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">16</td>
+<td>Heroku Flow</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Heroku</td>
+</tr>
+<tr><td align="right">17</td>
+<td>Heroku Enterprise Basics</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Heroku</td>
+</tr>
+<tr><td align="right">18</td>
+<td>Salesforce &amp; Heroku Integration</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Heroku</td>
+</tr>
+<tr><td align="right">19</td>
+<td>API Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Integration</td>
+</tr>
+<tr><td align="right">20</td>
+<td>Apex Integration Services</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Integration</td>
+</tr>
+<tr><td align="right">21</td>
+<td>Salesforce Connect</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Integration</td>
+</tr>
+<tr><td align="right">22</td>
+<td>Apex Metadata API</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Integration</td>
+</tr>
+<tr><td align="right">23</td>
+<td>Lightning Experience Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">24</td>
+<td>Lightning Experience Development</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">25</td>
+<td>Visualforce &amp; Lightning Experience</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">26</td>
+<td>Lightning Experience for Sales</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">27</td>
+<td>Lightning Component Tips &amp; Gotchas</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">28</td>
+<td>Lightning Experience Features</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">29</td>
+<td>Lightning Components Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">30</td>
+<td>Lightning App Builder</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">31</td>
+<td>Lightning Experience Customization</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">32</td>
+<td>Lightning Apps</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">33</td>
+<td>Lightning Data Service Basics</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">34</td>
+<td>Lightning Experience Reports &amp; Dashboards</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">35</td>
+<td>Lightning Component Core Concepts</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">36</td>
+<td>Lightning Alternatives to JavaScript Buttons</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">37</td>
+<td>Lightning Design System</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">38</td>
+<td>Lightning Experience Chatter Basics for Admins</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">39</td>
+<td>Lightning Component Skills &amp; Tools</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">40</td>
+<td>Salesforce Mobile App Customization</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Mobile App</td>
+</tr>
+<tr><td align="right">41</td>
+<td>Visualforce Mobile</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Mobile App</td>
+</tr>
+<tr><td align="right">42</td>
+<td>Salesforce Mobile App Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>Mobile App</td>
+</tr>
+<tr><td align="right">43</td>
+<td>Branded Mobile Apps with mySalesforce</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Mobile App</td>
+</tr>
+<tr><td align="right">44</td>
+<td>Salesforce Mobile App Security and Compliance</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Mobile App</td>
+</tr>
+<tr><td align="right">45</td>
+<td>Mobile Analytics Exploration</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Mobile App</td>
+</tr>
+<tr><td align="right">46</td>
+<td>Apex Triggers</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>NA</td>
+</tr>
+<tr><td align="right">47</td>
+<td>Platform Events Basics</td>
+<td>Silver</td>
+<td>Basic</td>
+<td>NA</td>
+</tr>
+<tr><td align="right">48</td>
+<td>Asynchronous Apex</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>NA</td>
+</tr>
+<tr><td align="right">49</td>
+<td>Big Object Basics</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>NA</td>
+</tr>
+<tr><td align="right">50</td>
+<td>Company-Wide Org Settings</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>NA</td>
+</tr>
+<tr><td align="right">51</td>
+<td>Continuous Integration Using Salesforce DX</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Salesforce DX</td>
+</tr>
+<tr><td align="right">52</td>
+<td>Salesforce DX Development Model</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Salesforce DX</td>
+</tr>
+<tr><td align="right">53</td>
+<td>App Development with Salesforce DX</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Salesforce DX</td>
+</tr>
+<tr><td align="right">54</td>
+<td>Git and GitHub Basics</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Salesforce DX</td>
+</tr>
+<tr><td align="right">55</td>
+<td>AppExchange Security Review</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Security</td>
+</tr>
+<tr><td align="right">56</td>
+<td>Secure Secret Storage</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Security</td>
+</tr>
+<tr><td align="right">57</td>
+<td>Transaction Security</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Security</td>
+</tr>
+<tr><td align="right">58</td>
+<td>Session-Based Permission Sets and Security</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Security</td>
+</tr>
+<tr><td align="right">59</td>
+<td>Security Basics</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Security</td>
+</tr>
+<tr><td align="right">60</td>
+<td>Data Security</td>
+<td>Gold</td>
+<td>Intermediate</td>
+<td>Security</td>
+</tr>
+</tbody></table>
+</div></div></div>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>    
+    </apex:tab>
+    <apex:tab label="Focused Projects" name="name3" id="tabThree">
+    <apex:pageBlockSection >
+    <apex:pageBlockSectionItem >
+<div class="row"><div class="col-md-12"><div class="panel panel-success"><div class="panel-heading "><h3 class="panel-title"></h3></div>
+<table border="1" align="center" class="table table-striped table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Sr. No.</th>
+<th title="Field #2">Project Name</th>
+<th title="Field #3">Category</th>
+<th title="Field #4">Skill</th>
+<th title="Field #5">Group</th>
+</tr></thead>
+<tbody><tr><td align="right">1</td>
+<td>Create a Product Pipeline Dashboard with Analytics Charts</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Analytics</td>
+</tr>
+<tr><td align="right">2</td>
+<td>Create a Custom Map for Analytics Charts</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Analytics</td>
+</tr>
+<tr><td align="right">3</td>
+<td>Surface Data from IBM Watson Discovery in Salesforce</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">4</td>
+<td>Quick Start: Einstein Prediction Builder</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Artificial Intelligence</td>
+</tr>
+<tr><td align="right">5</td>
+<td>Quick Start: Heroku Connect</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Heroku</td>
+</tr>
+<tr><td align="right">6</td>
+<td>Quick Start: Lightning Components</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">7</td>
+<td>Build a Visualforce App with the Lightning Design System</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">8</td>
+<td>Build a Lightning App with the Lightning Design System</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">9</td>
+<td>Quick Start: Lightning App Builder</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">10</td>
+<td>Build a Lightning Component to Override a Standard Action</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">11</td>
+<td>Build Reusable Lightning Components</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">12</td>
+<td>Build Flexible Apps with Visualforce Pages and Lightning Components</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Lightning</td>
+</tr>
+<tr><td align="right">13</td>
+<td>Import and Export with Data Management Tools</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>NA</td>
+</tr>
+<tr><td align="right">14</td>
+<td>Quick Start: Salesforce DX</td>
+<td>Platinum</td>
+<td>Expert</td>
+<td>Salesforce DX</td>
+</tr>
+</tbody></table>
+</div></div></div>
+</apex:pageBlockSectionItem>
+<apex:pageBlockSectionItem >
+<apex:chart animate="true" data="{!barData}" height="300" width="400">
+    <apex:legend position="left"/>
+    <apex:axis type="Numeric" position="left" title="Focused Projects" grid="false"
+        fields="data" dashSize="4">
+        <apex:chartLabel />
+    </apex:axis>
+    <apex:axis type="Category" position="bottom" fields="name" title="">
+        <apex:chartLabel rotate="315"/>
+    </apex:axis>
+    <apex:barSeries highlight="true" orientation="vertical" axis="left" stacked="true"
+        xField="name" yField="data" title=""/>
+</apex:chart>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+    </apex:tab>
+    <apex:tab label="Knowledge Articles" name="name5" id="tabFive">
+    <div class="row"><div class="col-md-12"><div class="panel panel-success"><div class="panel-heading "><h3 class="panel-title"></h3></div>
+<table border="1" align="center" class="table table-striped table-bordered table-hover table-condensed">
+<thead><tr><th title="Field #1">Sr. No.</th>
+<th title="Field #2">Topic</th>
+<th title="Field #3">Author</th>
+<th title="Field #4">GSocial Link</th>
+</tr></thead>
+<tbody>
+<tr><td align="right">1</td>
+<td>Salesforce Live Agent Integration with AI Platform </td>
+<td>Vaibhav Gosain</td>
+<td><a href="https://genpactonline-my.sharepoint.com/:p:/g/personal/703187907_genpact_com/Eb3Ip03r4WNAmwWCqcCmLQ8BRR7zUmaif7pIcM_W3kZOaw?e=JuOakJ">Click here</a></td>
+</tr>
+<tr><td align="right">2</td>
+<td>Development through Salesforce DX</td>
+<td>Ashish Kumar</td>
+<td><a href="https://genpactonline-my.sharepoint.com/:p:/g/personal/703187907_genpact_com/EQSFaFtzz8RMphlBjXMsGbEBwuET9IAvOT8jmr7I1B9fvg?e=iVhrJO">Click here</a></td>
+</tr>
+<tr><td align="right">3</td>
+<td>Handling If Else conditions</td>
+<td>Vaibhav Gosain</td>
+<td><a href="https://genpactonline-my.sharepoint.com/:w:/g/personal/703187907_genpact_com/EUFKQ-lhJrZCnXIZrYL6FE0BV6fereyCq2u2pFSVyU5vew?e=iOwUKR">Click here</a></td>
+</tr>
+<tr><td align="right">4</td>
+<td>Error Handling Lightning and Apex</td>
+<td>Tej Pal Kumawat</td>
+<td><a href="https://genpactonline-my.sharepoint.com/:w:/g/personal/703187907_genpact_com/EWrS3MIL--RFnUyJNrEpH1EB7vdV_qHCs0VsrOzjBXUDaQ?e=wnU02O">Click here</a></td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+    </apex:tab>
+    </apex:tabPanel>        
+    </apex:pageBlock>
+
+</apex:page>

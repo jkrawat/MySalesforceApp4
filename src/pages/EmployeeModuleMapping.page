@@ -1,0 +1,42 @@
+<apex:page controller="EmployeeModuleMappingController" sidebar="false">
+    
+    <style>
+        .multipickclass{
+        width:100%;
+        }
+    </style>
+           
+    
+    <apex:form >        
+        <Strong>Select Employee: &nbsp;&nbsp;</Strong>
+    	<apex:selectList size="1" value="{!selectedEmpId}"> 
+        	<apex:selectOptions value="{!Employees}"/>  
+        	<apex:actionSupport event="onchange" action="{!SelectedEmployeeDetail}" reRender="selempdetailid" />
+    	</apex:selectList>               
+    	<br/>
+        <apex:outputPanel id="selempdetailid">            
+            <br/><Strong>Employee Name: &nbsp;</Strong> <apex:outputText value="{!selectedEmp.Name}"/>
+            <br/><Strong>OHR Id: &nbsp;</Strong> {!selectedEmp.OHR_ID__c}             
+            <br/><Strong>Trailhead Profile URL: &nbsp;</Strong> {!selectedEmp.Trailhead_Profile_URL__c}
+    	</apex:outputPanel> 
+        <br/><br/>
+		    </apex:form>        
+        <table border="1" style=" border-collapse: collapse;padding:2px;width:50%;">  
+            <tr>
+            <td><b>Available Modules</b></td>
+            <td><b>Modules Completed</b></td>
+           	</tr>
+        <tr>
+            <td>        
+                <apex:form >
+        <apex:selectList styleClass="multipickclass" value="{!selectedModules}" size="7" multiselect="true">                    
+                    <apex:selectOptions value="{!MyType}"/>
+                </apex:selectList>    
+               </apex:form>
+           </td>
+            <td></td>
+        </tr>            
+        </table>
+        
+
+</apex:page>
